@@ -1,0 +1,7 @@
+PUT https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
+Content-Type: application/json
+
+{
+    "name": "Xavier Bost",
+    "number": "+3387654321"
+}

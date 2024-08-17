@@ -1,1 +1,1 @@
-DELETE http://localhost:3001/api/persons/7159
+DELETE https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
