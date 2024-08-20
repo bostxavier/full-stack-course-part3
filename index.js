@@ -90,23 +90,21 @@ app.post('/api/persons', (request, response) => {
         })
     }
 
-    const duplicate = persons.find(p => p.name === body.name)
+    /* const duplicate = persons.find(p => p.name === body.name)
     if (duplicate) {
         return response.status(400).json({
             error: 'name must be unique'
         })
-    }
+    } */
 
-    const id = String(Math.floor(Math.random() * 10000))
-    const person = {
+    const person = new Person({
         name: body.name,
-        number: body.number,
-        id: id
-    }
+        number: body.number
+    })
 
-    persons = persons.concat(person)
-    
-    response.json(person)
+    person.save().then(person => {
+        response.json(person)
+    })
 })
 
 const PORT = process.env.PORT || 3001
