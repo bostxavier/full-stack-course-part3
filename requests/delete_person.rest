@@ -1,1 +1,2 @@
-DELETE https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
+// DELETE https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
+DELETE http://localhost:3001/api/persons/66c35c81bce3eaba0ceac40
