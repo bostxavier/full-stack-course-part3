@@ -1,4 +1,5 @@
-PUT https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
+// PUT https://full-stack-course-part3-phonebook.fly.dev/api/persons/6562
+PUT  http://localhost:3001/api/persons/66c4670c90c156d4f3bc4c9b
 Content-Type: application/json
 
 {

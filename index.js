@@ -52,7 +52,7 @@ app.delete('/api/persons/:id', (request, response, next) => {
         })
 })
 
-app.put('/api/persons/:id', (request, response) => {
+app.put('/api/persons/:id', (request, response, next) => {
     const id = request.params.id
     const body = request.body
 
@@ -71,12 +71,13 @@ app.put('/api/persons/:id', (request, response) => {
     const person = {
         name: body.name,
         number: body.number,
-        id: id
     }
 
-    persons = persons.map(p => p.id === person.id ? person : p)
-    
-    response.json(person)
+    Person.findByIdAndUpdate(id, person, {new: true})
+        .then(updatedPerson => {
+            response.json(updatedPerson)
+        })
+        .catch(error => next(error))
 })
 
 app.post('/api/persons', (request, response) => {
