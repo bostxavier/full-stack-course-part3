@@ -1,1 +1,2 @@
-GET https://full-stack-course-part3-phonebook.fly.dev/info
+// GET https://full-stack-course-part3-phonebook.fly.dev/info
+GET http://localhost:3001/info
